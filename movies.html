@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/movies.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a470e83216.css" crossorigin="anonymous">
+    <title>Movie App</title>
+</head>
+<body>
+<div id="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <header>
+                    <button id="home-btn"><i class="fa-solid fa-house-person-return"></i></button>
+                    <div class="sort-wrapper">
+                        <label for="sort-by-input" id="sort-by-label"><select name="sort-by" id="sort-by-input">
+                            <option value="">Show Me...</option>
+                            <option id="opt1" value="popular">Popular Movies</option>
+                            <option id="opt2" value="top_rated">Top Rated Movies</option>
+                            <option id="opt3" value="now_playing">Now Playing Movies</option>
+                            <option id="opt4" value="upcoming">Upcoming Movies</option>
+                            <option id="opt5" value="favorites">Favorite Movies</option>
+                            <option id="opt6" value="user">User Movies</option>
+                        </select></label>
+                        <button id="add-movie-btn" class="btn btn-open">Add Your Own Movie</button>
+                    </div>
+                    <form id="search-input-form">
+                        <label><input type="text" id="search-input" class="search" placeholder="Search"></label>
+                    </form>
+                </header>
+                <div class="overlay hidden"></div>
+                <section id="modal" class="modal hidden">
+                    <form id="user-inputs-form" action="">
+                        <div class="input-wrapper">
+                            <label for="title-input">Title:</label>
+                            <input type="text" id="title-input" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="overview-input">Description:</label>
+                            <textarea id="overview-input" rows="10" cols="10" required></textarea>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="rating-input">Rating:</label>
+                            <select name="rating-select" id="rating-input">
+                                <option value="1" id="rating-option1">1</option>
+                                <option value="2" id="rating-option2">2</option>
+                                <option value="3" id="rating-option3">3</option>
+                                <option value="4" id="rating-option4">4</option>
+                                <option value="5" id="rating-option5">5</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="genre-input">Genre:</label>
+                            <select name="genre-select" id="genre-input">
+                                <option value="28" id="genre-option1">Action</option>
+                                <option value="12" id="genre-option2">Adventure</option>
+                                <option value="16" id="genre-option3">Animation</option>
+                                <option value="35" id="genre-option4">Comedy</option>
+                                <option value="80" id="genre-option5">Crime</option>
+                                <option value="99" id="genre-option6">Documentary</option>
+                                <option value="18" id="genre-option7">Drama</option>
+                                <option value="10751" id="genre-option8">Family</option>
+                                <option value="14" id="genre-option9">Fantasy</option>
+                                <option value="36" id="genre-option10">History</option>
+                                <option value="27" id="genre-option11">Horror</option>
+                                <option value="10402" id="genre-option12">Music</option>
+                                <option value="9648" id="genre-option13">Mystery</option>
+                                <option value="10749" id="genre-option14">Romance</option>
+                                <option value="878" id="genre-option15">Science Fiction</option>
+                                <option value="10770" id="genre-option16">TV Movie</option>
+                                <option value="53" id="genre-option17">Thriller</option>
+                                <option value="10752" id="genre-option18">War</option>
+                                <option value="37" id="genre-option19">Western</option>
+                            </select>
+                        </div>
+                        <button class="" id="user-input-btn" type="submit">Submit Your Movie</button>
+                    </form>
+                </section>
+                <button id="to-top-btn">
+                            <a href="#" id="to-top">
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </a>
+                        </button>
+                <main id="main">
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SCRIPTS -->
+<script type="module" src="./js/movies.js"></script>
+</body>
+</html>
